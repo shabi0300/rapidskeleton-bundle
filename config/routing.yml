@@ -1,0 +1,4 @@
+# config/routes.yaml
+rapidskeleton_data:
+    resource: ../src/Controller/Backend
+    type: annotation

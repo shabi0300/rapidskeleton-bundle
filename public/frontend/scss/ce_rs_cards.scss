@@ -1,0 +1,41 @@
+@use '../../../../../../files/tpl/scss/rapidskeleton_variables';
+
+.content-rs-cards {
+    padding-block: var(--margin-padding-margin-vertikal);
+    background-color: var(--body-background);
+    [class^='container'] {
+        &.container-fluid {
+            padding-inline: var(--margin-padding-margin-horizontal);
+        }
+        .text-col-content {
+            padding-block: var(--margin-padding-margin-vertikal);
+            @media (min-width: 768px) {
+                padding-block: unset;
+            }
+        }
+        .rs-cards-wrapper {
+            margin-top: var(--margin-padding-abstand-4);
+            .rs-card {
+                padding: var(--margin-padding-abstand-2);
+                background-color: var(--cards-background);
+                border-radius: var(--border-radius);
+                margin-block: calc(var(--margin-padding-gutter) / 2);
+                @media (min-width: 992px) {
+                    margin-block: unset;
+                }
+                img {
+                    margin-bottom: var(--margin-padding-abstand-1);
+                }
+                h4 {
+                    color: var(--cards-headline-text);
+                }
+                p {
+                    color: var(--cards-paragraphs);
+                }
+                .rs-button {
+                    color: var(--cards-paragraphs) !important;
+                }
+            }
+        }
+    }
+}

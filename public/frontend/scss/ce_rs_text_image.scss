@@ -1,0 +1,29 @@
+@use '../../../../../../files/tpl/scss/rapidskeleton_variables';
+
+.content-rs-text-image {
+    padding-block: var(--margin-padding-margin-vertikal);
+    background-color: var(--body-background);
+    [class^='container'] {
+        padding-inline: var(--margin-padding-margin-horizontal);
+        .text-col-content {
+            padding-inline: var(--margin-padding-column-extra-padding);
+        }
+        &.container-fluid {
+            padding-inline: unset;
+            .text-col-content {
+                padding-inline: var(--margin-padding-fluid-extra-padding);
+                @media (min-width: 768px) {
+                    padding-block: var(--margin-padding-abstand-5);
+                    padding-inline: var(--margin-padding-abstand-4);
+                }
+                @media (min-width: 992px) {
+                    padding-block: unset;
+                    padding-inline: var(--margin-padding-fluid-extra-padding);
+                }
+            }
+        }
+        img {
+            margin-bottom: var(--margin-padding-gutter);
+        }
+    }
+}

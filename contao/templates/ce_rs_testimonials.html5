@@ -1,0 +1,50 @@
+<div class="content-rs-testimonials" <?php if ($this->dark_mode) : ?>mode="dark" <?php endif; ?>>
+    <div class="container<?php if ($this->full_width) : ?>-fluid<?php endif; ?>">
+        <?php if ($this->headline || $this->text || $this->addButton) : ?>
+            <div class="row<?= $this->center_text ? ' text-center' : ''; ?><?= $this->v_center ? ' align-items-center' : ''; ?>">
+                <div class="col-12<?= $this->layout_style == 'layout-2' ? ' col-md-6' : ''; ?><?= $this->mirror ? ' order-md-2' : ''; ?>">
+                    <<?= $this->hl ?>><?= $this->headline; ?></<?= $this->hl ?>>
+                    <?= $this->layout_style == 'layout-2' ? '</div><div class="col-md-6">' : ''; ?>
+                    <?= $this->optional_text; ?>
+                    <?= $this->addButton ? '<a href="' . $this->button_link . '" class="rs-button ' . $this->button_type . '" target="' . $this->button_target . '">' . $this->button_label . '</a>' : ''; ?>
+                </div>
+            </div>
+        <?php endif; ?>
+        <?php if ($this->testimonials) : ?>
+            <div class="testimonial-slider">
+                <?php $testimonalCount = 0; ?>
+                <?php foreach ($this->testimonials as $testimonial) : ?>
+                    <?php $testimonalCount++; ?>
+                    <?php if ($testimonalCount !== 0) : ?>
+                        <div class="row<?= $this->center_text ? ' text-center' : ''; ?><?= $this->v_center ? ' align-items-center' : ''; ?> testimonial-slide">
+                            <div class="col-md-4 text-center <?= $this->mirror ? ' order-md-2' : ''; ?>">
+                                <div class="testimonial-customer-image">{{picture::<?= $testimonial->customer_image; ?>?size=1}}</div>
+                                <div class="like-h4 testimonial-customer-name"><?= $testimonial->customer_firstname; ?> <?= $testimonial->customer_familyname; ?></div>
+                                <?php if ($testimonial->customer_description) : ?>
+                                    <div class="small testimonial-customer-description">
+                                        <p><?= $testimonial->customer_description; ?></p>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="testimonial-headline">
+                                    <p><b><?= $testimonial->testimonal_headline; ?></b></p>
+                                </div>
+                                <div class="testimonial-content"><?= $testimonial->testimonal_description; ?></div>
+                                <div class="testimonial-rating">
+                                    <div class="testimonial-rating-unfill"></div>
+                                    <div class="testimonial-rating-fill" style="width:<?= (100 / 5) * $testimonial->testimonal_rating; ?>%;"></div>
+                                </div>
+                                <div class="small testimonial-text-rating">
+                                    <p><?= $testimonial->customer_firstname; ?> <?= $testimonial->customer_familyname; ?> vergibt <?= $testimonial->testimonal_rating; ?> Sterne</p>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
+        <?php else : ?>
+            Keine Testimonials verfügbar
+        <?php endif; ?>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+{
+    "name": "lupcom/rapidskeleton-bundle",
+    "type": "contao-bundle",
+    "require": {
+        "contao/core-bundle": "^4.13 || ^5.0"
+    },
+    "license": "LGPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Lupcom\\RapidSkeletonBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Björn Kludig",
+            "email": "bjoern.kludig@lupcom.de"
+        }
+    ],
+    "extra": {
+        "contao-manager-plugin": "Lupcom\\RapidSkeletonBundle\\ContaoManager\\Plugin"
+    }
+}

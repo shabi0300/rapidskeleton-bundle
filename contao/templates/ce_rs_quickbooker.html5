@@ -1,0 +1,37 @@
+<div class="content-rs-quickbooker" <?php if ($this->dark_mode) : ?>mode="dark" <?php endif; ?>>
+    <div class="container<?php if ($this->full_width) : ?>-fluid<?php endif; ?>">
+        <form id="quickbooker" method="GET" action="<?= $this->quickbooker_url ?>" target="<?= $this->quickbooker_target ?>">
+            <div class="quickbooker <?= $this->quickbooker_style ?>">
+                <div class="row">
+                    <div class="col-lg-3 col-location">
+                        <div class="col-content location-wrapper">
+                            <input type="text" class="location" id="location" name="location" placeholder="Wohin soll es gehen" />
+                            <label for="location">Wohin?</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-dates">
+                        <div class="col-content">
+                            <div class="w50">
+                                <input type="text" class="arrival" id="arrival" name="arrival" placeholder="Anreise" />
+                                <label for="arrival">Anreise</label>
+                            </div>
+                            <div class="w50">
+                                <input type="text" class="departure" id="departure" name="departure" placeholder="Abreise" />
+                                <label for="departure">Abreise</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-guests">
+                        <div class="col-content number-of-guests-wrapper">
+                            <input type="text" class="number-of-guests" id="number-of-guests" name="number-of-guests" placeholder="Anzahl der Gäste" />
+                            <label for="number-of-guests">Anzahl der Gäste</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-button">
+                        <button class="rs-button">Suchen</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

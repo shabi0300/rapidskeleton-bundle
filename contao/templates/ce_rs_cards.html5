@@ -1,0 +1,37 @@
+<div class="content-rs-cards" <?php if ($this->dark_mode) : ?>mode="dark" <?php endif; ?>>
+    <div class="container<?php if ($this->full_width) : ?>-fluid<?php endif; ?>">
+        <div class="row<?= $this->center_text ? ' text-center' : ''; ?><?= $this->v_center ? ' align-items-center' : ''; ?>">
+            <div class="col-12">
+                <div class="text-col-content">
+                    <<?= $this->hl ?>><?= $this->headline; ?></<?= $this->hl ?>>
+                    <?= $this->optional_text; ?>
+                    <?= $this->addButton ? '<a href="' . $this->button_link . '" class="rs-button ' . $this->button_type . '" target="' . $this->button_target . '">' . $this->button_label . '</a>' : ''; ?>
+                </div>
+            </div>
+        </div>
+        <div class="row rs-cards-wrapper">
+            <?php if (isset($this->cards)) : ?>
+                <?php foreach ($this->cards as $card) : ?>
+                    <?php if ($card['headline'] != '' || $card['text'] != '') : ?>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="rs-card">
+                                <?php if ($card['icon']) : ?>
+                                    {{picture::<?= $card['icon']; ?>?class=icon big}}
+                                <?php endif; ?>
+                                <?php if ($card['headline'] != '') : ?>
+                                    <h4><?= $card['headline']; ?></h4>
+                                <?php endif; ?>
+                                <?php if ($card['text'] != '') : ?>
+                                    <?= $card['text']; ?>
+                                <?php endif; ?>
+                                <?php if ($card['button_link'] != '') : ?>
+                                    <a href="<?= $card['button_link']; ?>" class="rs-button <?= $card['button_type']; ?>" target="<?= $card['button_target']; ?>"><?= $card['button_label'] ?></a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>

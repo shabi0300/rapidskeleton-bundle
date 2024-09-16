@@ -1,0 +1,86 @@
+@use '../../../../../../files/tpl/scss/rapidskeleton_variables';
+
+.content-rs-testimonials {
+    padding-block: var(--margin-padding-margin-vertikal);
+    background-color: var(--body-background);
+    [class^='container'] {
+        &.container-fluid {
+            padding-inline: var(--margin-padding-margin-horizontal);
+        }
+        .testimonial-slider {
+            .testimonial-slide {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center; 
+                text-align: center;
+                padding: var(--margin-padding-abstand-2);
+                .testimonial-customer-image {
+                    position: relative;
+                    display: inline-block;
+                    width: 75%;
+                    margin-bottom: var(--margin-padding-gutter);
+                    border-radius: 100%;
+                    background-color: -var(-body-image-placeholder);
+                    overflow: hidden;
+                }
+                .testimonial-customer-name {
+                }
+                .testimonial-customer-description {
+                }
+                .testimonial-headline {
+                    margin-bottom: var(--typografie-h1-bottom);
+                }
+                .testimonial-content {
+                }
+                .testimonial-rating {
+                    position: relative;
+                    margin-top: var(--buttons-margin-top);
+                    margin-bottom: var(--margin-padding-abstand-1);
+                    display: inline-block;
+                    height: var(--std-icons);
+                    .testimonial-rating-unfill {
+                        position: relative;
+                        height: var(--std-icons);
+                        -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><mask id="mask0_363_470" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25"><rect y="0.781219" width="24" height="24" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_363_470)"><path d="M5.825 21.7812L7.45 14.7562L2 10.0312L9.2 9.40622L12 2.78122L14.8 9.40622L22 10.0312L16.55 14.7562L18.175 21.7812L12 18.0562L5.825 21.7812Z" fill="none" stroke-width="1.5" stroke="black"/></g></svg>');
+                        mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><mask id="mask0_363_470" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25"><rect y="0.781219" width="24" height="24" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_363_470)"><path d="M5.825 21.7812L7.45 14.7562L2 10.0312L9.2 9.40622L12 2.78122L14.8 9.40622L22 10.0312L16.55 14.7562L18.175 21.7812L12 18.0562L5.825 21.7812Z" fill="none" stroke-width="1.5" stroke="black"/></g></svg>');
+                        mask-repeat: repeat-x;
+                        mask-size: calc(var(--std-icons) + calc(var(--std-icons) / 6)) var(--std-icons);
+                        background-color: var(--body-icon);
+                        width: calc(var(--std-icons) * 6 - 2px);
+                    }
+                    .testimonial-rating-fill {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: var(--std-icons);
+                        -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><mask id="mask0_363_470" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25"><rect y="0.781219" width="24" height="24" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_363_470)"><path d="M5.825 21.7812L7.45 14.7562L2 10.0312L9.2 9.40622L12 2.78122L14.8 9.40622L22 10.0312L16.55 14.7562L18.175 21.7812L12 18.0562L5.825 21.7812Z" fill="black"/></g></svg>');
+                        mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><mask id="mask0_363_470" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25"><rect y="0.781219" width="24" height="24" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_363_470)"><path d="M5.825 21.7812L7.45 14.7562L2 10.0312L9.2 9.40622L12 2.78122L14.8 9.40622L22 10.0312L16.55 14.7562L18.175 21.7812L12 18.0562L5.825 21.7812Z" fill="black"/></g></svg>');
+                        mask-repeat: repeat-x;
+                        mask-size: calc(var(--std-icons) + calc(var(--std-icons) / 6)) var(--std-icons);
+                        background-color: var(--body-icon);
+                    }
+                }
+                .testimonial-text-rating {
+                }
+            }
+        }
+
+        .slick-slider {
+            .slick-prev, .slick-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
+            }
+
+            .slick-prev {
+                left: 10px;
+            }
+
+            .slick-next {
+                right: 10px;
+            }
+        }
+    }
+}

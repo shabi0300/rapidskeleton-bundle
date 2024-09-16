@@ -1,0 +1,26 @@
+<div class="content-rs-slider" <?php if ($this->dark_mode) : ?>mode="dark" <?php endif; ?>>
+    <div class="container<?php if ($this->full_width) : ?>-fluid<?php endif; ?>">
+        <div class="row<?= $this->center_text ? ' text-center' : ''; ?>">
+            <div class="col-12">
+                <<?= $this->hl ?>><?= $this->headline; ?></<?= $this->hl ?>>
+                <?= $this->text; ?>
+                <?= $this->addButton ? '<a href="' . $this->button_link . '" class="rs-button ' . $this->button_type . '" target="' . $this->button_target . '">' . $this->button_label . '</a>' : ''; ?>
+            </div>
+            <?php if (is_array($this->multiSRC)) : ?>
+                <div class="col-12 rs-slider-wrapper">
+                    <div class="rs-slider" slides-mobile="<?= $this->slide_count_mobile; ?>" slides-tablet="<?= $this->slide_count_tablet; ?>" slides-desktop="<?= $this->slide_count_desktop; ?>">
+                        <?php foreach ($this->multiSRC as $sliderImage) : ?>
+                            <div class="rs-slide">
+                                {{picture::<?= $sliderImage; ?>?size=<?= $this->customImageSize; ?>}}
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="rs-slider-arrows">
+                        <div class="rs-slider-arrow rs-prev-arrow"></div>
+                        <div class="rs-slider-arrow rs-next-arrow"></div>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>

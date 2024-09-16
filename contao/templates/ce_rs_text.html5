@@ -1,0 +1,12 @@
+<div class="content-rs-text" <?php if ($this->dark_mode) : ?>mode="dark" <?php endif; ?>>
+    <div class="container<?php if ($this->full_width) : ?>-fluid<?php endif; ?>">
+        <div class="row<?= $this->center_text ? ' text-center' : ''; ?><?= $this->v_center ? ' align-items-center' : ''; ?>">
+            <div class="col-12<?= $this->layout_style == 'layout-2' ? ' col-md-6' : ''; ?><?= $this->mirror ? ' order-md-2' : ''; ?>">
+                <<?= $this->hl ?>><?= $this->headline; ?></<?= $this->hl ?>>
+                <?= $this->layout_style == 'layout-2' ? '</div><div class="col-md-6">' : ''; ?>
+                <?= $this->text; ?>
+                <?= $this->addButton ? '<a href="' . $this->button_link . '" class="rs-button ' . $this->button_type . '" target="' . $this->button_target . '">' . $this->button_label . '</a>' : ''; ?>
+            </div>
+        </div>
+    </div>
+</div>
